@@ -1,26 +1,20 @@
 import { Card } from "./components/Card"
-
+ import { Layout } from "./components/Layout"
 
 function App() {
   return(
-    <> 
-    <div>
-      Hello Word
-      <Card 
-      id={2}
-      paragraph="Typescript"
-      details="TS para frontend e backend"
-      />
-      <Card 
-      id={3}
-      paragraph="HTML"
-      details="HTML para frontend"
-      />
-    </div>
-    <div>
-      Footer
-    </div>
-    </>
+      <Layout>
+        <Card 
+          id={2}
+          paragraph="Typescript"
+          details="TS para frontend e backend"
+        />
+        <Card 
+          id={3}
+          paragraph="HTML"
+          details="HTML para frontend"
+        />
+      </Layout>
   )
 }
 
