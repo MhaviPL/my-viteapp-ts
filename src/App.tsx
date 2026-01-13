@@ -1,9 +1,9 @@
 import { Card } from "./components/Card"
-import { Fragment } from "react/jsx-runtime"
+
 
 function App() {
   return(
-    <Fragment>
+    <> 
     <div>
       Hello Word
       <Card/>
@@ -12,7 +12,7 @@ function App() {
     <div>
       Footer
     </div>
-    </Fragment>
+    </>
   )
 }
 
