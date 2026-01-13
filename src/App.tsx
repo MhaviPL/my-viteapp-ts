@@ -6,8 +6,16 @@ function App() {
     <> 
     <div>
       Hello Word
-      <Card/>
-      <Card/>
+      <Card 
+      id={2}
+      paragraph="Typescript"
+      details="TS para frontend e backend"
+      />
+      <Card 
+      id={3}
+      paragraph="HTML"
+      details="HTML para frontend"
+      />
     </div>
     <div>
       Footer
