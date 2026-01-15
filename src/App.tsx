@@ -1,25 +1,28 @@
 //import { Card } from "./components/Card"
-import { Layout } from "./components/Layout"
-import styled  from "styled-components"
+import { Input, Box, AbsoluteCenter, Center, Button, Flex } from "@chakra-ui/react"
+import { PasswordInput } from "@/components/ui/password-input"
 
-const Box = styled.div`
-  background-color: lightblue;
-  border-radius: 5px;
-  padding-left: 10px;
-`
 
 function App() {
   return(
-      <Layout>
-        <Box>
-          <h1>Faça o Login</h1>
+        <Box minH="100vh" backgroundColor="darkgray" padding="25px">
+          <AbsoluteCenter axis="both">
+            <Box backgroundColor="white" padding="15px" borderRadius="25px">
+              <Flex gap="4" direction="column">
+                <Center>
+                <h1>Faça o Login</h1>
+                </Center>
+                <label htmlFor="emailInput">Email: </label>
+                <Input placeholder="Digite seu Email" type="email" id="emailInput"/>
+                <label htmlFor="passwordInput">Senha:</label>
+                <PasswordInput placeholder="Digite sua Senha" type="password" id="passwordInput"/>
+                <Center>
+                  <Button type="button">Entrar</Button>
+                </Center>
+              </Flex>
+            </Box>
+          </AbsoluteCenter>
         </Box>
-        <label htmlFor="emailInput">Email: </label>
-        <input type="email" id="emailInput" />
-        <label htmlFor="passwordInput">Senha:</label>
-        <input type="password" id="passwordInput" />
-        <button type="button">Entrar</button>
-      </Layout>
   )
 }
 
