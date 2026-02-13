@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 import path from 'path' //importação para reconhecer o @ do chakra UI
 
@@ -10,5 +10,10 @@ export default defineConfig({
       // traduzir o "@" para a pasta "src"
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  test: {
+    globals: true, //
+    environment: 'jsdom', //
+    include: ['src/**/*.{test,spec}.{ts,tsx}'], 
   },
 })
