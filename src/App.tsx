@@ -1,7 +1,7 @@
 //import { Card } from "./components/Card"
 import { Input, Box, AbsoluteCenter, Center, Button, Flex } from "@chakra-ui/react"
 import { PasswordInput } from "@/components/ui/password-input"
-
+import { login } from "./services/login"
 
 function App() {
   return(
@@ -17,7 +17,7 @@ function App() {
                 <label htmlFor="passwordInput">Senha:</label>
                 <PasswordInput placeholder="Digite sua Senha" type="password" id="passwordInput"/>
                 <Center>
-                  <Button type="button">Entrar</Button>
+                  <Button onClick={login} type="button">Entrar</Button>
                 </Center>
               </Flex>
             </Box>
